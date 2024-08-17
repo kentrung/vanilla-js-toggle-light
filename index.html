@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla JS: Light switch</title>
+  <!-- bootstrap css 4.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="text-center mt-5">
+    <div class="mb-5">
+      <img class="img-thumbnail" src="https://github-production-user-asset-6210df.s3.amazonaws.com/15643762/358855493-b976c8dc-4f5d-44d9-8d04-e36ad1add78d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240817%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240817T160732Z&X-Amz-Expires=300&X-Amz-Signature=1fdf30954529742b07208c220a796d957e9d7ff705de68cd904c0cdfb7462af3&X-Amz-SignedHeaders=host&actor_id=15643762&key_id=0&repo_id=843848452">
+    </div>
+    <button class="btn btn-primary">Bật đèn</button>
+    <a
+      target="_blank"
+      href="https://viblo.asia/p/vanilla-js-project-light-switch-QpmlejrV5rd"
+      class="mt-3 d-block"
+    >
+      https://viblo.asia/p/vanilla-js-project-light-switch-QpmlejrV5rd
+    </a>
+  </div>
+  
+  <script>
+    let statusLight = false
+
+    const imgLightOn = 'https://github-production-user-asset-6210df.s3.amazonaws.com/15643762/358855608-697fe371-bfd9-4076-8242-e62f392095a9.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240817%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240817T160705Z&X-Amz-Expires=300&X-Amz-Signature=1e57c79d548521ceeb62d0addce6f7040ad6fa65592e55cf428f3c19211330ea&X-Amz-SignedHeaders=host&actor_id=15643762&key_id=0&repo_id=843848452'
+
+    const imgLightOff = 'https://github-production-user-asset-6210df.s3.amazonaws.com/15643762/358855493-b976c8dc-4f5d-44d9-8d04-e36ad1add78d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240817%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240817T160732Z&X-Amz-Expires=300&X-Amz-Signature=1fdf30954529742b07208c220a796d957e9d7ff705de68cd904c0cdfb7462af3&X-Amz-SignedHeaders=host&actor_id=15643762&key_id=0&repo_id=843848452'
+
+    const imgElement = document.querySelector('img')
+    const btnElement = document.querySelector('button')
+
+    btnElement.addEventListener('click', function() {
+    imgElement.src = statusLight ? imgLightOff : imgLightOn
+    btnElement.innerText = statusLight ? 'Bật đèn' : 'Tắt đèn'
+    statusLight = !statusLight
+    })
+  </script>
+</body>
+</html>
